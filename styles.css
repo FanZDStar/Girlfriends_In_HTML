@@ -1,0 +1,371 @@
+* {
+    color: #131313;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    /* background-color: #0e0e0f; */
+
+    /* background-image: linear-gradient(19deg,#21D4FD 0%,#B721FF 100%); */
+
+    /* background-color: #D9AFD9;
+    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%); */
+
+    /* background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%); */
+    
+    /* background-color: #00DBDE;
+    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%); */
+
+    /* background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%); */
+
+    /* background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%); */
+
+    background-color: #8EC5FC;
+    background-image: linear-gradient(to right, #fbc2e1, #a6c1e1);
+
+
+
+
+
+}
+
+.game-container {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+/* .game-container 选择器：
+height: 90vh;：将游戏容器的高度设置为视口高度的 90%。
+display: flex;：将游戏容器设置为弹性布局。
+flex-direction: column;：将游戏容器的主轴方向设置为垂直方向。
+justify-content: space-between;：在游戏容器内，使元素在竖直方向上均匀分布，并尽可能靠近顶部和底部边缘。
+align-items: center;：在游戏容器内，使元素在水平方向上居中对齐。 */
+
+.title-container {
+    text-align: center;
+    width: 200px;
+    height: 70px;
+    border-bottom: solid 1px #3a3a3c;
+    border-top: solid 1px #3a3a3c;
+    :hover{
+        color:rgb(64, 144, 218);
+    }
+    :active{
+        color:white;
+    }
+}
+
+/* .title-container 选择器：
+text-align: center;：将标题容器内的文字居中对齐。
+width: 510px;：将标题容器的宽度设置为 510 像素。
+height: 70px;：将标题容器的高度设置为 70 像素。
+border-bottom: solid 1px #3a3a3c;：在标题容器底部添加一条实线边框，颜色为深灰色。 */
+
+.tile-container {
+    width: 327px;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+/* .tile-container 选择器：
+width: 327px;：将图块容器的宽度设置为 327 像素。
+height: 300px;：将图块容器的高度设置为 300 像素。
+margin-bottom: 20px;：在图块容器底部添加一个 20 像素的外边距 */
+
+
+.key-container {
+    width: 510px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* .key-container 选择器：
+width: 510px;：将键盘容器的宽度设置为 510 像素。
+display: flex;：将键盘容器设置为弹性布局。     
+flex-wrap: wrap;：当键盘容器内的元素超出容器宽度时，换行显示。 */
+
+.key-container button {
+    width: 43px;
+    height: 50px;
+    border-radius: 4px;
+    border: none;
+    background-color: #fcfdfe;
+    margin: 4px;
+}
+
+/* .key-container button 选择器：
+width: 43px;：将键盘按钮的宽度设置为 43 像素。
+height: 50px;：将键盘按钮的高度设置为 50 像素。
+border-radius: 4px;：将键盘按钮的边角半径设置为 4 像素，使其具有圆角外观。
+border: none;：去除键盘按钮的边框。
+background-color: #818384;：将键盘按钮的背景颜色设置为深灰色。
+margin: 4px;：将键盘按钮之间的外边距设置为 4 像素。 */
+
+.key-container button:nth-child(11) {
+    margin-left: 30px;
+}
+
+
+
+.key-container button:nth-child(20){
+    width: 68px;
+}
+.key-container button:nth-child(28) {
+    width: 68px;
+    font-size: 12px;
+}
+.key-container button:nth-child(29) {
+    position: absolute;
+    top: 61%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    width: 5%;
+    line-height: 70%;
+    height: 5%;
+    background: white;
+    color:black;
+    font-size: 20px;
+    font-family:Tahoma;
+}
+
+
+
+.tile-container div {
+    display: flex;
+}
+
+.tile-container .tile {
+    width: 60px;
+    height: 45px;
+    border: 2px solid #3a3a3c;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+}
+
+/* .tile-container .tile 选择器：
+width: 60px;：将图块的宽度设置为 60 像素。
+height: 45px;：将图块的高度设置为 45 像素。
+border: 2px solid #3a3a3c;：将图块的边框设置为实线，颜色为深灰色。
+box-sizing: border-box;：指定图块的盒模型为 border-box，以便更精确地控制元素的尺寸。
+display: flex;：将图块内的元素设置为弹性布局。
+justify-content: center;：将图块内的元素在水平方向上居中对齐。
+align-items: center;：将图块内的元素在竖直方向上居中对齐。
+margin: 2px;：将图块之间的外边距设置为 2 像素。 */
+
+.message-container {
+    height: 30px;
+    margin: 10px 0 20px 0;
+}
+
+/* .message-container 选择器：
+height: 30px;：将消息容器的高度设置为 30 像素。
+margin: 10px 0 20px 0;：将消息容器的上、下、左、右四个方向的外边距分别设置为 10 像素、0、20 像素、0。 */
+
+.message-container p {
+    background-color: #195776;
+    border-radius: 10px;
+    padding: 8px;
+    margin: 0;
+}
+
+
+.tile.flip {
+    animation: 0.3s linear flipping;
+}
+
+.score-container {
+    width: 510px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.score-container span {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.score-container .score {
+    color: rgb(236, 238, 236);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+@keyframes flipping {
+    0% {
+        transform: rotateX(0deg);
+    }
+    50% {
+        transform: rotateX(90deg);
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+/* @keyframes flipping 规则：
+0% { transform: rotateX(0deg); }：在翻转动画开始时，将元素绕 X 轴旋转 0 度。
+50% { transform: rotateX(90deg); }：在翻转动画进行到一半时，将元素绕 X 轴旋转 90 度。
+100% { transform: rotateX(0deg); }：在翻转动画结束时，将元素恢复到原来的位置，绕 X 轴旋转 0 度。 */
+
+.light-grey-overlay {
+    background-color: #55435cc9 !important;
+    border:none !important;
+}
+
+.yellow-overlay {
+    background-color: #b59f3a !important;
+    border:none !important;
+}
+
+.green-overlay {
+    background-color: #538d4e !important;
+    border:none !important;
+}
+
+
+@media (max-width: 430px) {
+    body {
+        overflow-x: hidden;
+        display: flex;
+        justify-content: center
+    }
+
+    .game-container {
+        height: 568px;
+    }
+
+    .title-container{
+        width: 250px;
+    }
+
+    .message-container {
+        margin: 5px auto;
+    }
+
+    .tile-container {
+        width: 220px;
+        height: 330px;
+        margin-bottom: 0;
+    }
+    
+    .message-container {
+        margin-bottom: 10px;
+    }
+
+    .key-container {
+        width: 280px;
+    }
+
+    .key-container button {
+        width: 18px;
+        height: 30px;
+        font-size: 0.6rem;
+    }
+
+    .key-container button:nth-child(11) {
+        margin-left: 20px;
+    }
+    
+    .key-container button:nth-child(20),
+    .key-container button:nth-child(28) {
+        width: 40px;
+        margin: 4px 2px 4px 1px;
+    }
+}
+
+
+
+
+
+/*新添加的代码*/
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+}
+.container {
+    height: 100%;
+    background-image: linear-gradient(to right, #fbc2e1, #a6c1e1);
+}
+.login-wrapper{
+    background-color: #fff;
+    width:358px;
+    height:588px;
+    border-radius: 15px;
+    padding:0 50px;
+    position:relative;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+.header{
+    font-size:38px;
+    font-weight:bold;
+    text-align:center;
+    line-height:200px;
+}
+.input-item{
+    display:block;
+    width:100%;
+    margin-bottom:20px;
+    border:0;
+    padding:10px;
+    border-bottom:1px solid rgb(128,125,125);
+    font-size:15px;
+    outline:none;
+}
+
+.btn{
+    padding:10px;
+    text-align:center;
+    margin-top:40px;
+    background-image:linear-gradient(to right, #fbc2e1, #a6c1e1);
+    color:#fff;
+}   
+.msg{
+    text-align:center;
+    line-height: 88px;
+}
+a{
+    text-decoration-line:none;
+    color:#abc1ee;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
